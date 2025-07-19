@@ -1,0 +1,26 @@
+.a-home {
+    z-index: 103;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    padding: 10px 10px 5px 10px;
+    text-decoration: none;
+
+    transition: all 0.1s ease;
+    /* background-color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.3); */
+}
+
+.a-home:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.home-icon {
+    width: 35px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    
+}

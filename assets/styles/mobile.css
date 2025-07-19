@@ -1,0 +1,256 @@
+@media screen and (max-width: 768px) {
+    body {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        text-align: justify;
+    }
+
+    header {
+        height: 200px;
+        box-shadow: -2px -2px 10px white;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    nav {
+        width: 70vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 100vw;
+        transition: left 0.4s cubic-bezier(.1, 0, .2, 1);
+        z-index: 20;
+        /*left: 100%;*/
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.7);
+    }
+
+    nav.menu-aberto {
+        left: 30vw;
+    }
+
+    nav .a-menu {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: wrap;
+    }
+
+    h1 {
+        color: white;
+        font-family: "Montserrat", "Cal Sans", Roboto, sans-serif;
+    }
+    
+    p {
+        font-family: "Poppins", "Cal Sans", Roboto, sans-serif;
+    }
+
+    .h1-top {
+        font-size: 30px;
+        text-align: center;
+        padding: 0px 25px;
+    }
+
+    .back-blur.ativo {
+        display: block;
+        position: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(1px);
+        z-index: 10;
+        transition: all 0.3s;
+        opacity: 1;
+    }
+
+    .burguer-icon {
+        z-index: 100;
+        display: block;
+        width: 28px;
+        height: auto;
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    .cancel-icon {
+        z-index: 100;
+        display: none;
+        width: 24px;
+        height: auto;
+        position: fixed;
+        top: 12px;
+        right: 15px;
+        cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    .buttons-pages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 150px;
+    }
+
+    #themeBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 20px;
+        right: 170px;
+    }
+
+    #logoIFSCa {
+        display: none;
+    }
+
+    #ifLogo {
+        width: 40px;
+        height: auto;
+    }
+
+    #logoSC {
+        width: 60px;
+        height: auto;
+    }
+
+    .o-que-e {
+        margin-top: -10px;
+    }
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .a-main:hover {
+        opacity: 1;
+    }
+
+    .a-contri:hover {
+        background-color: none;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 32px;
+        overflow: hidden;
+        background-color: #222;
+        color: white;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .carrossel-texto {
+        display: inline-block;
+        white-space: nowrap;
+        animation: rolar 10s linear infinite;
+    }
+
+    .carrossel-texto:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes rolar {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .carrossel-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 8px;
+    }
+
+    footer img {
+        height: 30px;
+        border-radius: 1px solid transparent;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+
+    .p-info2v {
+        font-family: "Poppins", Roboto, sans-serif;
+        font-size: 13.5px;
+        border-left: 1px solid white;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -1px;
+    }
+
+    .bar-carr {
+        font-family: "Poppins", Roboto, sans-serif;
+        color: rgb(59, 58, 62);
+        margin: 0px 5px 0px 5px;
+    }
+
+    .container-cont a:hover {
+        transform: scale(1);
+        background: none;
+    }
+
+    .container-cont a:active {
+        transform: scale(0.95);
+        background-color: rgb(0, 0, 0, 0.1);
+    }
+
+    .sc-text {
+        margin-bottom: 60px;
+    }
+
+    .audio {
+        margin-top: 35px;
+    }
+
+    .seta-para-cima-icon-a {
+        transition: opacity 0.5s;
+
+        animation: mexendo 8s infinite;
+    }
+
+    .text-for-tooltip,
+    .text-for-tooltip-arrow,
+    .text-for-tooltip-name {
+        display: none;
+    }
+
+    /* Dark theme */
+    nav.dark {
+        transition: left 0.4s cubic-bezier(.1, 0, .2, 1);
+    }
+}
