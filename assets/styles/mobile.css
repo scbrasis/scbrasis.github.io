@@ -381,6 +381,14 @@
         text-decoration: underline;
     }
 
+    .ol-list {
+        width: auto;
+    }
+
+    .a-paraiba li {
+        width: auto;
+    }
+
     /* Dark theme */
     nav.dark {
         transition: left 0.4s cubic-bezier(.1, 0, .2, 1);
@@ -396,3 +404,4 @@
         transform: scale(0.98);
     }
 }
+
