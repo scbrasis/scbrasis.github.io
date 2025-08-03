@@ -1,0 +1,356 @@
+header {
+  width: 100%;
+  height: 230px;
+  background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0, 0.5),
+      rgb(0, 0, 0, 0.3),
+      rgb(0, 0, 0, 0.1)
+    ),
+    url("/assets/images/danças-santa-catarina-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p-error {
+  font-family: "Times New Roman", "Cardo", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin-bottom: -20px;
+  opacity: 0.5;
+}
+
+.a-home {
+  z-index: 103;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 10px 10px 5px 10px;
+  text-decoration: none;
+
+  transition: all 0.1s ease;
+  /* background-color: rgb(255, 255, 255);
+    box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.3); */
+}
+
+.a-home:hover {
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.home-icon {
+  width: 35px;
+  height: auto;
+}
+
+.imgs-main-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.p-esportes {
+  color: black;
+  position: absolute;
+  z-index: 1;
+
+  top: -5px;
+  right: 0;
+
+  font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+    sans-serif;
+  font-size: 16px;
+  text-align: right;
+
+  /* background-color: #1b1e23; */
+  padding: 5px 20px;
+  /* width: 250px; */
+  background-color: #ffff;
+  border-radius: 10px 0px 0px 20px;
+}
+
+.p-esportes.dark {
+  color: white;
+  /* background-color: #1b1e23; */
+  background-color: #131518;
+}
+
+.p-esportes-2 {
+  color: black;
+  position: absolute;
+  z-index: 1;
+
+  top: -5px;
+  left: 0;
+
+  font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+    sans-serif;
+  font-size: 16px;
+  text-align: right;
+
+  /* background-color: #1b1e23; */
+  padding: 5px 20px;
+  background-color: #ffff;
+  border-radius: 0px 10px 20px 0px;
+}
+
+body.dark .p-esportes-2 {
+  color: white;
+  /* background-color: #1b1e23; */
+  background-color: #131518;
+}
+
+.p-esportes-span {
+  display: flex;
+  flex-direction: column;
+
+  color: black;
+  position: absolute;
+  z-index: 1;
+
+  top: -5px;
+  right: 0;
+
+  font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+    sans-serif;
+  font-size: 16px;
+  text-align: right;
+
+  /* background-color: #1b1e23; */
+  /* padding: 5px 20px;
+    background-color: #ffff; 
+    border-radius: 10px 0px 0px 20px; */
+}
+
+body.dark .p-esportes-span {
+  color: white;
+  /* background-color: #1b1e23; */
+  background-color: #131518;
+}
+
+.span-hc {
+  padding: 5px 20px;
+  /* background-color: #1b1e23; */
+  background-color: #ffff;
+  border-radius: 10px 0px 0px 20px;
+}
+
+.span-hc-2 {
+  background-color: #ffff;
+  position: absolute;
+  width: 100px;
+  top: 25px;
+  right: 0;
+  padding: 5px 20px;
+  border-radius: 0px 0px 0px 20px;
+}
+
+body.dark .span-hc-2 {
+  color: white;
+  /* background-color: #1b1e23; */
+  background-color: #131518;
+}
+
+body.dark .span-hc {
+  color: white;
+  /* background-color: #1b1e23; */
+  background-color: #131518;
+}
+
+body.dark .p-esportes-span {
+  border-radius: 10px 0px 0px 20px;
+}
+
+.dp {
+  padding: 0px;
+}
+
+.ps {
+  padding: 3px 0px;
+}
+
+.pp {
+  padding: 3px 7px;
+}
+
+.cp {
+  padding: 5px;
+}
+
+.imgs-main-hc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imgs-main-container b {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+body.dark .imgs-main-container b {
+  color: white;
+}
+
+.b-cant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.imgs-main-hc {
+  width: 100%;
+}
+
+.hc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+body.dark .b-cant {
+  color: white;
+}
+
+body.dark .relevo-imgs b {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 200px;
+    box-shadow: -2px -2px 10px white;
+  }
+
+  .hc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .p-esportes {
+    top: -13.5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* overflow: hidden; 
+        text-overflow: ellipsis; */
+    white-space: nowrap;
+
+    font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+      sans-serif;
+    font-size: 13px;
+
+    padding: 3px 15px;
+    width: 180px;
+    border-radius: 0px 0px 20px 20px;
+
+    color: black;
+    background-color: #ffff;
+  }
+
+  .p-esportes-2 {
+    top: -13.5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* overflow: hidden; 
+        text-overflow: ellipsis; */
+    white-space: nowrap;
+
+    font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+      sans-serif;
+    font-size: 13px;
+
+    padding: 3px 20px;
+    border-radius: 0px 0px 20px 20px;
+
+    color: black;
+    background-color: #ffff;
+  }
+
+  .p-esportes-span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    top: -13.5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
+      sans-serif;
+    font-size: 13px;
+
+    padding: 3px 20px;
+    width: 180px;
+    border-radius: 0px 0px 20px 20px;
+
+    color: black;
+    background-color: #ffff;
+  }
+
+  .span-hc-2 {
+    position: static;
+    top: auto;
+    right: auto;
+    width: auto;
+
+    margin-left: -15px;
+    margin-right: 15px;
+
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .sp {
+    text-align: center;
+    padding: 3px 0px 3px 5px;
+  }
+
+  .ps {
+    text-align: center;
+    padding: 0px 10px 0px 5px;
+    margin-right: 5px;
+  }
+
+  .dp {
+    text-align: center;
+    padding: 0px;
+    margin-right: 13px;
+  }
+
+  .pc {
+    width: 170px;
+  }
+
+  .sla {
+    width: 170px;
+  }
+
+  /* .h1-top {
+        white-space: nowrap;
+    } */
+}
