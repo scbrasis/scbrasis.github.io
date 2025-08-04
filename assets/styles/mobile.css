@@ -61,6 +61,10 @@
         transform: scale(0.98);
     }
 
+    nav.menu-aberto #scrollArrow {
+        z-index: -1;
+    }
+
     h1 {
         color: white;
         font-family: "Montserrat", "Cal Sans", Roboto, sans-serif;
