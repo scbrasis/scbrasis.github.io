@@ -43,31 +43,69 @@ const linkMisaelIcon = document.getElementById("linkMisael");
 
 const linkSumarioIcon = document.getElementById("linkSumario");
 
+let isScrolledIntoMain = false;
+
 const handleHeaderIcons = () => {
-  // Only apply scroll-based icon change logic on mobile
   if (isMobileView()) {
-    // If dark mode is active (themeToggle.checked is true), icons should always be light
-    if (themeToggle.checked) {
-      burgerIcon.src = burgerLightSrc;
-      closeIcon.src = closeLightSrc;
-    } else {
-      // Light mode is active, apply scroll-based change
-      if (window.scrollY > 80) {
-        burgerIcon.src = burgerDarkSrc;
-        closeIcon.src = closeDarkSrc;
-      } else {
-        burgerIcon.src = burgerLightSrc;
-        closeIcon.src = closeLightSrc;
-      }
-    }
+    return;
+  }
+
+  const isDarkMode = themeToggle.checked;
+
+  if (isDarkMode) {
+    burgerIcon.src = burgerLightSrc;
+    closeIcon.src = closeLightSrc;
   } else {
-    // On desktop, ensure light icons if dark mode is off
-    if (!themeToggle.checked) {
+    if (isScrolledIntoMain) {
+      burgerIcon.src = burgerDarkSrc;
+      closeIcon.src = closeDarkSrc;
+    } else {
       burgerIcon.src = burgerLightSrc;
       closeIcon.src = closeLightSrc;
-    } // If dark mode is on for desktop, the general theme logic should handle it via CSS. // We assume no specific dark icon on scroll for desktop here.
+    }
   }
 };
+
+if (mainSection) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        isScrolledIntoMain = !entry.isIntersecting;
+        
+        handleHeaderIcons();
+      });
+    },
+    {
+      root: null,
+      threshold: 0,
+      rootMargin: "0px 0px -100% 0px",
+    }
+  );
+
+  // Inicia a observação do elemento <main>.
+  observer.observe(mainSection);
+}
+
+//     if (themeToggle.checked) {
+//       burgerIcon.src = burgerLightSrc;
+//       closeIcon.src = closeLightSrc;
+//     } else {
+//       if (window.scrollY > 80) {
+//         burgerIcon.src = burgerDarkSrc;
+//         closeIcon.src = closeDarkSrc;
+//       } else {
+//         burgerIcon.src = burgerLightSrc;
+//         closeIcon.src = closeLightSrc;
+//       }
+//     }
+//   } else {
+//     // On desktop, ensure light icons if dark mode is off
+//     if (!themeToggle.checked) {
+//       burgerIcon.src = burgerLightSrc;
+//       closeIcon.src = closeLightSrc;
+//     } // If dark mode is on for desktop, the general theme logic should handle it via CSS. // We assume no specific dark icon on scroll for desktop here.
+//   }
+// };
 
 // Função que aplica o tema
 function aplicarTema(tema) {
