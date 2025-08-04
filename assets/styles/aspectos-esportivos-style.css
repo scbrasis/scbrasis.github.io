@@ -376,4 +376,7 @@ li {
           overflow: hidden; 
           text-overflow: ellipsis; */
     }
+    
+    .dim-font { 
+      font-size: 10px;
 }
