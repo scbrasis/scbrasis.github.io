@@ -19,7 +19,6 @@ const elementosParaAlterar = document.querySelectorAll(
 
 const burgerIcon = document.getElementById("openIcon");
 const closeIcon = document.getElementById("closeIcon");
-const mainSection = document.querySelector("main");
 
 const burgerLightSrc = "/assets/images/icons/menu-light-icon.svg";
 const burgerDarkSrc = "/assets/images/icons/menu-dark-icon.svg";
@@ -44,48 +43,49 @@ const linkMisaelIcon = document.getElementById("linkMisael");
 
 const linkSumarioIcon = document.getElementById("linkSumario");
 
-let isScrolledIntoMain = false;
-
 const handleHeaderIcons = () => {
-  if (!isMobileView()) {
-    return;
-  }
 
-  const isDarkMode = themeToggle.checked;
+  if (isMobileView()) {
 
-  if (isDarkMode) {
-    burgerIcon.src = burgerLightSrc;
-    closeIcon.src = closeLightSrc;
-  } else {
-    if (isScrolledIntoMain) {
-      burgerIcon.src = burgerDarkSrc;
-      closeIcon.src = closeDarkSrc;
-    } else {
+    if (themeToggle.checked) {
+
       burgerIcon.src = burgerLightSrc;
+
       closeIcon.src = closeLightSrc;
+
+    } else {
+
+      if (window.scrollY > 80) {
+
+        burgerIcon.src = burgerDarkSrc;
+
+        closeIcon.src = closeDarkSrc;
+
+      } else {
+
+        burgerIcon.src = burgerLightSrc;
+
+        closeIcon.src = closeLightSrc;
+
+      }
+
     }
+
+  } else {
+
+    // On desktop, ensure light icons if dark mode is off
+
+    if (!themeToggle.checked) {
+
+      burgerIcon.src = burgerLightSrc;
+
+      closeIcon.src = closeLightSrc;
+
+    } // If dark mode is on for desktop, the general theme logic should handle it via CSS. // We assume no specific dark icon on scroll for desktop here.
+
   }
+
 };
-
-if (mainSection) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        isScrolledIntoMain = !entry.isIntersecting;
-        
-        handleHeaderIcons();
-      });
-    },
-    {
-      root: null,
-      threshold: 0,
-      rootMargin: "0px 0px -100% 0px",
-    }
-  );
-
-  // Inicia a observação do elemento <main>.
-  observer.observe(mainSection);
-}
 
 //     if (themeToggle.checked) {
 //       burgerIcon.src = burgerLightSrc;
@@ -643,5 +643,3 @@ const aHome = document.getElementsByClassName(".a-home");
 function tooltipHome() {
   textForTooltipInicio.textContent = "Voltar ao início";
 }
-
-
