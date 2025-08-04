@@ -46,7 +46,7 @@ const linkSumarioIcon = document.getElementById("linkSumario");
 let isScrolledIntoMain = false;
 
 const handleHeaderIcons = () => {
-  if (isMobileView()) {
+  if (!isMobileView()) {
     return;
   }
 
@@ -642,3 +642,4 @@ const aHome = document.getElementsByClassName(".a-home");
 function tooltipHome() {
   textForTooltipInicio.textContent = "Voltar ao início";
 }
+
