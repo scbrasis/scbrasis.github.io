@@ -19,6 +19,7 @@ const elementosParaAlterar = document.querySelectorAll(
 
 const burgerIcon = document.getElementById("openIcon");
 const closeIcon = document.getElementById("closeIcon");
+const mainSection = document.querySelector("main");
 
 const burgerLightSrc = "/assets/images/icons/menu-light-icon.svg";
 const burgerDarkSrc = "/assets/images/icons/menu-dark-icon.svg";
@@ -642,4 +643,5 @@ const aHome = document.getElementsByClassName(".a-home");
 function tooltipHome() {
   textForTooltipInicio.textContent = "Voltar ao início";
 }
+
 
