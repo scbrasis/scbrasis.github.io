@@ -342,12 +342,17 @@ body.dark .relevo-imgs b {
     margin-right: 13px;
   }
 
+  .pp,
   .pc {
-    width: 170px;
+    text-align: center;
   }
 
-  .sla {
-    width: 170px;
+  .pc2 {
+    width: 200px;
+  }
+
+  .cp2 {
+    margin-right: 0px;
   }
 
   /* .h1-top {
