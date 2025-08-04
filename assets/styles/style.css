@@ -1117,10 +1117,10 @@ body.dark .fonte-box a:visited {
 body.dark audio {
   cursor: url('/assets/images/icons/cursor-dark-icon.svg'), auto;
 }
-
+/* 
 body.dark #scrollArrow {
   transition: 0.2s ease;
-}
+} */
 
 body.dark .a-paraiba {
   text-decoration: underline;
@@ -2030,4 +2030,5 @@ body.dark .a-paraiba:hover {
 
 .bb8:hover .bb8__head::after {
   background-position: 0 0 !important;
+
 }
