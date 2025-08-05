@@ -327,6 +327,7 @@ li {
         font-family: "Poppins", "Cal Sans", "Montserrat", "Poppins", Roboto,
         sans-serif;
         font-size: 13px;
+        text-align: center;
 
         padding: 3px 15px;
         border-radius: 0px 0px 20px 20px;
@@ -380,5 +381,17 @@ li {
     
     .dim-font { 
       font-size: 10px;
+    }
+
+    .fg {
+        width: 180px;
+    }
+
+    .bl {
+        width: 210px;
+    }
+
+    .jg {
+        width: 120px;
     }
 }
